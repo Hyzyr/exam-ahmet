@@ -1,0 +1,371 @@
+.features {
+    &__inner {
+        padding: 120px 0;
+        border-radius: 5px;
+        background-color: rgba(239, 239, 239, .2);
+    }
+
+    &__content {
+        box-sizing: border-box;
+        padding-left: 70px;
+        @include transition;
+    }
+
+    &__header {
+        margin-bottom: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include transition;
+
+        &-icon {
+            margin-bottom: 60px;
+            width: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include transition;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        h1 {
+            text-align: center;
+        }
+    }
+
+    &__blocks {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__col {
+        width: calc(50% - 75px);
+        @include transition;
+    }
+
+    &__item {
+        margin-bottom: 90px;
+        position: relative;
+        @include transition;
+
+        &:last-child {
+            display: none;
+            margin-bottom: 0;
+        }
+
+        &-icon {
+            position: absolute;
+            top: 10px;
+            left: 0;
+
+            width: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include transition;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &-content {
+            padding-left: 100px;
+            @include transition;
+
+            p {
+                font-size: 20px;
+                max-height: 87px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+    }
+}
+
+// 1680px
+@mixin features-xxxxlg-xxxxxlg {
+    .features {
+        &__content {
+            padding: 0;
+        }
+
+        &__header {
+            margin-bottom: 180px;
+
+            &-icon {
+                width: 100px;
+            }
+        }
+
+        &__col {
+            width: calc(50% - 50px);
+        }
+
+        &__item {
+            p {
+                font-size: 18px;
+            }
+        }
+    }
+}
+
+// 1460px
+@mixin features-xxxlg-xxxxlg {
+    .features {
+        &__header {
+            margin-bottom: 140px;
+
+            &-icon {
+                width: 80px;
+            }
+        }
+
+        &__item {
+            p {
+                font-size: 16px;
+            }
+
+            &-icon {
+                top: 15px;
+                width: 34px;
+            }
+
+            &-content {
+                padding-left: 70px;
+            }
+        }
+    }
+}
+
+// 1340px
+@mixin features-xxlg-xxxlg {
+    .features {
+        &__header {
+            margin-bottom: 110px;
+
+            &-icon {
+                width: 66px;
+            }
+        }
+
+        &__blocks {
+            p {
+                font-size: 14px;
+                line-height: 28px;
+
+                max-height: 48px;
+            }
+        }
+
+        &__col {
+            width: calc(50% - 33px);
+        }
+
+        &__item {
+            margin-bottom: 50px;
+
+            &:last-child {
+                display: block;
+            }
+
+            &-icon {
+                top: 20px;
+                width: 20px;
+            }
+
+            &-content {
+                padding-left: 45px;
+            }
+        }
+    }
+}
+
+// 1180px
+@mixin features-xlg-xxlg {
+    .features {
+        &__header {
+            margin-bottom: 100px;
+        }
+
+        &__col {
+            width: calc(50% - 20px);
+        }
+    }
+}
+
+// 1024px
+@mixin features-lg-xlg {
+    .features {
+        &__inner {
+            padding: 100px 0;
+        }
+    }
+}
+
+// 840px
+@mixin features-md-lg {
+    .features {
+        &__inner {
+            padding-top: 70px;
+            padding-bottom: 60px;
+        }
+
+        &__header {
+            margin-bottom: 80px;
+
+            &-icon {
+                margin-bottom: 50px;
+            }
+        }
+
+        &__blocks {
+            flex-direction: column;
+            justify-content: unset;
+        }
+
+        &__col {
+            width: 100%;
+            flex-direction: column;
+
+            &:first-child {
+                margin-bottom: 30px;
+            }
+        }
+
+        &__item {
+            margin-bottom: 30px;
+            padding-bottom: 36px;
+
+            cursor: pointer;
+
+            &-icon {
+                top: 17px;
+            }
+
+            p {
+                overflow: hidden;
+                padding-right: 60px;
+                max-height: 0;
+                @include transition;
+            }
+
+            &::before {
+                content: url("../images/icons/down-arrow.svg");
+                position: absolute;
+                top: 17px;
+                right: 25px;
+
+                width: 16px;
+                height: 16px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                @include transition;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+
+                width: 100%;
+                height: 1px;
+                background-color: rgba(0, 0, 0, .1);
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+
+            &.active {
+                p {
+                    max-height: 168px;
+                }
+
+                &::before {
+                    transform: rotate(-180deg);
+                }
+            }
+        }
+    }
+}
+
+// 540px
+@mixin features-xsm-sm {
+    .features {
+        &__inner {
+            margin-bottom: 65px;
+            padding: 0;
+            padding-top: 60px;
+        }
+
+        &__header {
+            margin-bottom: 60px;
+
+            &-icon {
+                margin-bottom: 40px;
+            }
+        }
+
+        &__item {
+            margin-bottom: 25px;
+            padding-bottom: 25px;
+
+            &::before {
+                right: 0;
+            }
+
+            &::after {
+                width: calc(100% + 60px);
+                left: -30px;
+            }
+        }
+
+        &__col {
+            &:first-child {
+                margin-bottom: 25px;
+            }
+        }
+    }
+}
+
+// 340px
+@mixin features-xxxsm-xxsm {
+    .features {
+        &__inner {
+            margin-bottom: 40px;
+            padding: 0;
+            padding-top: 40px;
+        }
+
+        &__header {
+            margin-bottom: 40px;
+
+            &-icon {
+                width: 50px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &__item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+
+            &::after {
+                width: calc(100% + 32px);
+                left: -16px;
+            }
+        }
+
+        &__col {
+            &:first-child {
+                margin-bottom: 15px;
+            }
+        }
+    }
+}

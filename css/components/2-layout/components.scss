@@ -1,0 +1,109 @@
+/* Typography */
+h1 {
+  color: $white;
+  font-size: 48px;
+  line-height: 60px;
+
+  &.reg {
+    color: $secondary;
+    font-weight: 400;
+  }
+
+  &.extra {
+    color: $secondary;
+    font-size: 50px;
+    line-height: 74px;
+  }
+}
+
+h2 {
+  font-size: 40px;
+  line-height: 55px;
+}
+
+h3 {
+  font-size: 35px;
+  line-height: 49px;
+
+  &.extra {
+    font-size: 37px;
+    line-height: 52px;
+  }
+}
+
+h4 {
+  font-size: 30px;
+  line-height: 49px;
+}
+
+h5 {
+  font-size: 22px;
+  line-height: 31px;
+}
+
+h6 {
+  font-size: 20px;
+  line-height: 49px;
+}
+
+p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 35px;
+
+  &.asap {
+    font-family: $asap;
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+
+.auto__container {
+  max-width: 1704px;
+  margin: 0 auto;
+  padding: 0 60px;
+  @include transition;
+
+  &.sm {
+    padding: 0 86px;
+  }
+}
+
+.button {
+  box-sizing: border-box;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px; 
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    opacity: .7;
+  }
+
+  span {
+    font-family: $asap;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &.primary {
+    background-color: $main;
+
+    span {
+      color: $white;
+    }
+  }
+
+  &.secondary {
+    background-color: $white;
+    border: 1px solid $main;
+
+    span {
+      color: $purple;
+    }
+  }
+}

@@ -1,0 +1,320 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    padding-top: 120px;
+    padding-bottom: 20px;
+    width: 100%;
+    @include transition;
+
+    &.bg {
+        padding-top: 20px;
+        background-color: $main;
+    }
+
+    &.active {
+        padding-top: 90px;
+        background-color: $white;
+
+        .burger {
+            &__inner {
+                width: 22px;
+                height: 22px;
+
+                &-item {
+                    height: 2px;
+                }
+
+                &::before {
+                    height: 2px;
+                }
+
+                &::after {
+                    height: 2px;
+                }
+            }
+        }
+
+        .header {
+            &__logo {
+                svg {
+                    margin-right: 32px;
+                    width: 48px;
+                    height: 48px;
+                    color: $main;
+                }
+
+                &-title {
+                    font-weight: 400;
+                    font-size: 29px;
+                    line-height: 35px;
+                    color: $secondary;
+                }
+            }
+
+            &__content {
+                width: 60%;
+
+                &-links {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        display: flex;
+        align-items: center;
+
+        svg {
+            margin-right: 32px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+
+            img {
+                @include fullImage;
+            }
+        }
+
+        &-title {
+            font-family: $karla;
+            font-weight: 400;
+            font-size: 29px;
+            line-height: 35px;
+            color: $white;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-links {
+            display: none;
+            align-items: center;
+        }
+
+        &-link {
+            color: #000000;
+            font-family: $asap;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 1;
+            padding: 5px 30px;
+            border-right: 2px solid #000000;
+
+            &:last-child {
+                border: none;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+        }
+    }
+}
+
+// 1460px
+@mixin header-xxxlg-xxxxlg {
+    .header {
+        &.active {
+            .header {
+                &__content {
+                    width: calc(45% - 30px);
+                }
+            }
+        }
+    }
+}
+
+// 1340px
+@mixin header-xxlg-xxxlg {
+    .header {
+        padding-top: 70px;
+
+        .burger {
+            background-color: $white;
+            border-radius: 50%;
+
+            &__inner {
+                width: 16px;
+                height: 16px;
+
+                &-item {
+                    height: 2px;
+                    background-color: $purple;
+                }
+
+                &::before {
+                    height: 2px;
+                    background-color: $purple;
+                }
+
+                &::after {
+                    height: 2px;
+                    background-color: $purple;
+                }
+            }
+        }
+
+        &__logo {
+            svg {
+                margin-right: 18px;
+                width: 33px;
+                height: 33px;
+            }
+
+            &-title {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+    }
+}
+
+// 1180px
+@mixin header-xlg-xxlg {
+    .header {
+        padding-top: 40px;
+
+        &.active {
+            padding-top: 60px;
+
+            .header {
+                &__logo {
+                    svg {
+                        margin-right: 25px;
+                        width: 40px;
+                        height: 40px;
+                    }
+
+                    &-title {
+                        font-size: 23px;
+                        line-height: 28px;
+                    }
+                }
+
+                &__content {
+                    width: calc(45% - 15px);
+                }
+            }
+        }
+
+        &__content {
+            &-link {
+                padding: 0 25px;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 1;
+                border-right: 1px solid $black;
+            }
+        }
+    }
+}
+
+// 1024px
+@mixin header-lg-xlg {
+    .header {
+        padding-top: 35px;
+
+        .burger {
+            width: 30px;
+            height: 30px;
+
+            &__inner {
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        &__logo {
+            svg {
+                margin-right: 15px;
+                width: 28px;
+                height: 28px;
+            }
+
+            &-title {
+                font-size: 16px;
+                line-height: 19px;
+            }
+        }
+
+        &.active {
+            .header {
+                &__content {
+                    width: 45%;
+                }
+            }
+        }
+    }
+}
+
+// 700px
+@mixin header-sm-md {
+    .header {
+        &.active {
+            .header {
+                &__logo {
+                    svg {
+                        margin-right: 0;
+                        width: 33px;
+                        height: 33px;
+                    }
+
+                    &-title {
+                        display: none;
+                    }
+                }
+
+                &__content {
+                    width: 72%;
+                }
+            }
+        }
+    }
+}
+
+// 540px
+@mixin header-xsm-sm {
+    .header {
+        &.active {
+            padding-top: 40px;
+
+            .header {
+                &__content {
+                    width: calc(100% - 40px);
+                }
+            }
+        }
+    }
+}
+
+// 420px
+@mixin header-xxsm-xsm {
+    .header {
+        &.active {
+            .header {
+                &__content {
+                    width: calc(100% - 50px);
+
+                    &-link {
+                        padding: 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,388 @@
+// 1680px
+@include xxxxlg-xxxxxlg {
+    // layout start
+    @include nav-xxxxlg-xxxxxlg;
+    @include benefits-xxxxlg-xxxxxlg;
+    @include check-xxxxlg-xxxxxlg;
+    @include promo-xxxxlg-xxxxxlg;
+    @include features-xxxxlg-xxxxxlg;
+    @include footer-xxxxlg-xxxxxlg;
+    // layout end
+
+    // index start
+    @include intro-xxxxlg-xxxxxlg;
+    @include news-xxxxlg-xxxxxlg;
+    // index end
+
+    h1 {
+        font-size: 44px;
+        line-height: 52px;
+
+        &.reg {
+            font-size: 42px;
+            line-height: 49px;
+        }
+
+        &.extra {
+            font-size: 46px;
+            line-height: 56px;
+        }
+    }
+
+    h4 {
+        font-size: 28px;
+    }
+
+    h5 {
+        font-size: 20px;
+        line-height: 1;
+    }
+}
+
+// 1460px
+@include xxxlg-xxxxlg {
+    // layout start
+    @include header-xxxlg-xxxxlg;
+    @include nav-xxxlg-xxxxlg;
+    @include benefits-xxxlg-xxxxlg;
+    @include check-xxxlg-xxxxlg;
+    @include promo-xxlg-xxxlg;
+    @include features-xxxlg-xxxxlg;
+    @include footer-xxxlg-xxxxlg;
+    // layout end
+
+    // index start
+    @include news-xxlg-xxxlg;
+    // index end
+
+    h1 {
+        font-size: 40px;
+        line-height: 48px;
+
+        &.reg {
+            font-size: 37px;
+            line-height: 45px;
+        }
+
+        &.extra {
+            font-size: 36px;
+            line-height: 46px;
+        }
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    h4 {
+        font-size: 22px;
+    }
+}
+
+// 1340px
+@include xxlg-xxxlg {
+    // layout start
+    @include header-xxlg-xxxlg;
+    @include nav-xxlg-xxxlg;
+    @include benefits-xxlg-xxxlg;
+    @include check-xxlg-xxxlg;
+    @include promo-xxlg-xxxlg;
+    @include features-xxlg-xxxlg;
+    @include footer-xxlg-xxxlg;
+    // layout end
+
+    // index start
+    @include intro-xxlg-xxxlg;
+    @include news-xxlg-xxxlg;
+    // index end
+
+    h1 {
+        font-size: 36px;
+        line-height: 46px;
+
+        &.reg {
+            font-size: 33px;
+            line-height: 41px;
+        }
+
+        &.extra {
+            font-size: 25px;
+            line-height: 36px;
+        }
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 72px;
+    }
+
+    h3 {
+        font-size: 25px;
+        line-height: 36px;
+
+        &.extra {
+            font-size: 25px;
+            line-height: 36px;
+        }
+    }
+
+    h4,
+    h6 {
+        font-size: 18px;
+    }
+
+    p {
+        &.asap {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+
+    .auto__container {
+        padding: 0 30px;
+
+        &.sm {
+            padding: 0 60px;
+        }
+    }
+
+    .button {
+        padding: 14px 28px;
+
+        span {
+            font-size: 15px;
+            line-height: 27px;
+        }
+    }
+}
+
+// 1180px
+@include xlg-xxlg {
+    // layout start
+    @include header-xlg-xxlg;
+    @include nav-xlg-xxlg;
+    @include benefits-xlg-xxlg;
+    @include check-xlg-xxlg;
+    @include promo-xlg-xxlg;
+    @include features-xlg-xxlg;
+    @include footer-xlg-xxlg;
+    // layout end
+
+    // index start
+    @include intro-xlg-xxlg;
+    @include news-xlg-xxlg;
+    // index end
+
+    h5 {
+        font-size: 20px;
+        line-height: 60px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 28px;
+
+        &.asap {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}
+
+// 1024px
+@include lg-xlg {
+    // layout start
+    @include header-lg-xlg;
+    @include nav-lg-xlg;
+    @include benefits-lg-xlg;
+    @include check-lg-xlg;
+    @include features-lg-xlg;
+    // layout end
+
+    // index start
+    @include intro-lg-xlg;
+    // index end
+
+    h1 {
+        font-size: 29px;
+        line-height: 42px;
+
+        &.reg {
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+}
+
+// 940px
+@include pre-lg-xlg {
+    // layout start
+    @include promo-pre-lg-xlg;
+    // layout end
+
+    .auto__container {
+        &.sm {
+            padding: 0 45px
+        }
+    }
+}
+
+// 840px
+@include md-lg {
+    // layout start
+    @include benefits-md-lg;
+    @include features-md-lg;
+    // layout end
+
+    // index start
+    @include intro-md-lg;
+    @include news-md-lg;
+    // index end
+
+    h1 {
+        font-size: 24px;
+        line-height: 34px;
+
+        &.reg {
+            font-size: 24px;
+            line-height: 34px;
+        }
+
+        &.extra {
+            font-size: 22px;
+            line-height: 32px;
+        }
+    }
+
+    h3 {
+        &.extra {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+// 765px
+@include pre-md-lg {
+    // layout start
+    @include nav-pre-md-lg;
+    // layout end
+}
+
+// 700px
+@include sm-md {
+    // layout start
+    @include header-sm-md;
+    @include nav-sm-md;
+    @include benefits-sm-md;
+    @include check-sm-md;
+    @include promo-sm-md;
+    @include footer-sm-md;
+    // layout end
+
+    // index start
+    @include intro-sm-md;
+    @include news-sm-md;
+    // index end
+
+    h3 {
+        font-size: 20px;
+        line-height: 26px;
+
+        &.extra {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+
+    .auto__container {
+        &.sm {
+            padding: 0 20px;
+        }
+    }
+}
+
+// 540px
+@include xsm-sm {
+    // layout start
+    @include header-xsm-sm;
+    @include nav-xsm-sm;
+    @include benefits-xsm-sm;
+    @include features-xsm-sm;
+    @include footer-xsm-sm;
+    // layout end
+
+    // index start
+    @include news-xsm-sm;
+    // index end
+
+    h1 {
+        &.reg {
+            font-size: 20px;
+            line-height: 30px;
+        }
+    }
+
+    .auto__container {
+        &.sm {
+            padding: 0;
+        }
+    }
+}
+
+// 420px
+@include xxsm-xsm {
+    // layout start
+    @include header-xxsm-xsm;
+    @include benefits-xxsm-xsm;
+    @include check-xxsm-xsm;
+    @include promo-xxsm-xsm;
+    // layout end
+
+    // index start
+    // index end
+
+    h1 {
+        &.reg {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        &.extra {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 24px;
+
+        &.extra {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    h6 {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+
+// 340px
+@include xxxsm-xxsm {
+    // layout start
+    @include nav-xxxsm-xxsm;
+    @include benefits-xxxsm-xxsm;
+    @include features-xxxsm-xxsm;
+    // layout end
+
+    // index start
+    // index end
+
+    .auto__container {
+        padding: 0 16px;
+    }
+}
