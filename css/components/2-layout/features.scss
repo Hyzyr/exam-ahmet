@@ -35,8 +35,6 @@
     }
 
     &__blocks {
-        box-sizing: border-box;
-        padding-left: 70px;
         display: flex;
         justify-content: space-between;
     }
@@ -44,6 +42,11 @@
     &__col {
         width: calc(50% - 50px);
         @include transition;
+
+        &:first-child {
+            box-sizing: border-box;
+            padding-left: 70px;
+        }
     }
 
     &__item {
@@ -103,6 +106,12 @@
 
         &__blocks {
             padding-left: 0;
+        }
+
+        &__col {
+            &:first-child {
+                padding-left: 0;
+            }
         }
 
         &__item {

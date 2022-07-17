@@ -37,7 +37,13 @@
         padding: 125px 0;
 
         .promo {
+            &__inner {
+                padding-left: 0;
+            }
+
             &__image {
+                box-sizing: border-box;
+                padding-left: 70px;
                 width: calc(50% - 55px);
             }
 
@@ -402,11 +408,12 @@
 
         &__content {
             text-align: center;
+
             &-row {
                 justify-content: center;
             }
         }
-        
+
         &.uniq {
             padding-top: 50px;
             padding-bottom: 90px;
