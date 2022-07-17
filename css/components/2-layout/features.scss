@@ -6,8 +6,6 @@
     }
 
     &__content {
-        box-sizing: border-box;
-        padding-left: 70px;
         @include transition;
     }
 
@@ -37,12 +35,14 @@
     }
 
     &__blocks {
+        box-sizing: border-box;
+        padding-left: 70px;
         display: flex;
         justify-content: space-between;
     }
 
     &__col {
-        width: calc(50% - 75px);
+        width: calc(50% - 50px);
         @include transition;
     }
 
@@ -101,8 +101,8 @@
             }
         }
 
-        &__col {
-            width: calc(50% - 50px);
+        &__blocks {
+            padding-left: 0;
         }
 
         &__item {
